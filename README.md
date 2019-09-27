@@ -1,4 +1,4 @@
-Sample application for the **GraphQL Meetup 2019 by msg system ag in munich** article 
+Sample application for the **GraphQL Meetup 2019 by msg system ag in munich**  
 
 
 ## Features 
