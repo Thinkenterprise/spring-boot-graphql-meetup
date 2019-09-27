@@ -1,6 +1,5 @@
 package com.thinkenterprise.test.configuration.oauth2;
 
-import org.springframework.boot.test.context.TestComponent;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.client.RestTemplateCustomizer;
 import org.springframework.context.annotation.Bean;

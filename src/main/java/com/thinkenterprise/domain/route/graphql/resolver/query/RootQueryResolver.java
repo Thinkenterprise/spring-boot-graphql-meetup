@@ -2,17 +2,16 @@ package com.thinkenterprise.domain.route.graphql.resolver.query;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.thinkenterprise.domain.route.RouteException;
 import com.thinkenterprise.domain.route.graphql.error.RouteGraphQLError;
 import com.thinkenterprise.domain.route.jpa.model.Route;
 import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import graphql.GraphQLError;
 
@@ -25,7 +24,6 @@ import graphql.GraphQLError;
 * @author Michael Schäfer
 */
 
-@Profile("!mapper")
 @Component(RootQueryResolver.ROOT_QUERY_RESOLVER)
 public class RootQueryResolver implements GraphQLQueryResolver {
 
@@ -45,10 +43,8 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 		this.routeRepository=routeRepository;	
 	}
 	
-	// Enable if Profile basicSecurity is enabled @PreAuthorize("hasRole('read')")
+	
 	// Enable if Profile OAuth2Security is enabled @PreAuthorize("#oauth2.hasScope('read')")
-	// Enable if Profile context is enabled public List<Route> routes(DataFetchingEnvironment dataFetchingEnvironment) {
-	//                                        System.out.println(dataFetchingEnvironment.getContext().toString());
 	public List<Route> routes() {
 		
 		if(!exception)

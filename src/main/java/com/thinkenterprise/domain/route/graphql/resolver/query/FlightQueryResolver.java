@@ -1,13 +1,12 @@
 package com.thinkenterprise.domain.route.graphql.resolver.query;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
-
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import com.thinkenterprise.domain.route.jpa.model.Flight;
 import com.thinkenterprise.domain.route.jpa.model.Route;
 import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**  
 * GraphQL Spring Boot Samples 
@@ -18,7 +17,6 @@ import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
 * @author Michael Schäfer
 */
 
-@Profile("!mapper")
 @Component(value=FlightQueryResolver.ROOT_QUERY_RESOLVER)
 public class FlightQueryResolver implements GraphQLResolver<Flight> {
 	

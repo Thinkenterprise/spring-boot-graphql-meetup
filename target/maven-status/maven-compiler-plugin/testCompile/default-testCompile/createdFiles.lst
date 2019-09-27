@@ -1,0 +1,5 @@
+com\thinkenterprise\test\configuration\oauth2\RestTemplateFactoryConfiguration$CustomRestTemplateCustomizer.class
+com\thinkenterprise\test\GraphQLRouteMutationTest.class
+com\thinkenterprise\test\configuration\oauth2\AddHeaderInterceptor.class
+com\thinkenterprise\test\GraphQLRouteQueryTest.class
+com\thinkenterprise\test\configuration\oauth2\RestTemplateFactoryConfiguration.class

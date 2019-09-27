@@ -2,15 +2,14 @@ package com.thinkenterprise.domain.route.graphql.resolver.mutation;
 
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
-
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.thinkenterprise.domain.route.RouteException;
 import com.thinkenterprise.domain.route.graphql.publisher.RouteCreatePublisher;
 import com.thinkenterprise.domain.route.jpa.model.Route;
 import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**  
 * GraphQL Spring Boot Samples 
@@ -21,7 +20,6 @@ import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
 * @author Michael Schäfer
 */
 
-@Profile("!mapper")
 @Service
 public class RootMutationResolver implements GraphQLMutationResolver {
 
